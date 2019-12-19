@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: 'https://fantasysports.yahooapis.com/fantasy/v2/game/',
+        url: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams',
         method: 'GET'
     }).then(
         function(response) {
