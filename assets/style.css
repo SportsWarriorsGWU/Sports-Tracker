@@ -1,0 +1,34 @@
+body {
+    background-color: #ebecf0;
+}
+
+figure {
+    width: 90%;
+    margin: 0.5rem auto;
+}
+
+.has-bg-img {
+    background-image: url(./images/banner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.navbar-item {
+    opacity: 90%;
+}
+
+.is-child {
+    background-color: #02075D;
+}
+
+.tile-images {
+    cursor: pointer;
+}
+
+#title {
+    color: #02075D;
+}
+
+#heading {
+    margin-bottom: 1rem;
+}
