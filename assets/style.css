@@ -2,6 +2,10 @@ body {
     background-color: #ebecf0;
 }
 
+footer {
+    background-color: #ebecf0;
+}
+
 figure {
     width: 90%;
     margin: 0.5rem auto;
@@ -21,14 +25,50 @@ figure {
     background-color: #02075D;
 }
 
-.tile-images {
-    cursor: pointer;
-}
-
-#title {
+#index-title {
     color: #02075D;
 }
 
-#heading {
+#teams-title {
+    color: #02075D;
+}
+
+#stats-title {
+    color: #02075D;
+}
+
+#index-heading {
     margin-bottom: 1rem;
+}
+
+#teams-heading {
+    margin-bottom: 1rem;
+}
+
+#stats-heading {
+    margin-bottom: 1rem;
+}
+
+#index-footer {
+    background-color: #ebecf0;
+}
+
+#index-footer-content {
+    background-color: #F8F4FF;
+}
+
+#teams-footer {
+    background-color: #ebecf0;
+}
+
+#teams-footer-content {
+    background-color: #F8F4FF;
+}
+
+#stats-footer {
+    background-color: #ebecf0;
+}
+
+#stats-footer-content {
+    background-color: #F8F4FF;
 }
