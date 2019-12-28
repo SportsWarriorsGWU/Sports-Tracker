@@ -10,7 +10,7 @@ $(document).ready(function() {
             console.log('Error');
         } else if (league === 'MLB') {
             $.ajax({
-                url: `http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/${teamToLoad}`,
+                url: `https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/${teamToLoad}`,
                 method: 'GET'
             }).then(
                 function(response) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
             )
         } else if (league === 'NBA') {
             $.ajax({
-                url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${teamToLoad}`,
+                url: `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${teamToLoad}`,
                 method: 'GET'
             }).then(
                 function(response) {
@@ -64,7 +64,7 @@ $(document).ready(function() {
             )
         } else if (league === 'NFL') {
             $.ajax({
-                url: `http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/${teamToLoad}`,
+                url: `https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/${teamToLoad}`,
                 method: 'GET'
             }).then(
                 function(response) {
@@ -91,7 +91,7 @@ $(document).ready(function() {
             )
         } else if (league === 'NHL') {
             $.ajax({
-                url: `http://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/${teamToLoad}`,
+                url: `https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/${teamToLoad}`,
                 method: 'GET'
             }).then(
                 function(response) {
