@@ -54,8 +54,8 @@ $(document).ready(function() {
                     $('#ties').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].summary);
                     $('#record').append(paragraph);
-                    paragraph = $('<p>').text(response.team.nextEvent[0].name);
-                    $('#next-game').append(paragraph);
+                    //paragraph = $('<p>').text(response.team.nextEvent[0].name);
+                    //$('#next-game').append(paragraph);
                     paragraph = $('<p>').text(response.team.nextEvent[0].shortName);
                     $('#next-game').append(paragraph);
                     paragraph = $('<p>').text(response.team.nextEvent[0].date);

@@ -1,10 +1,9 @@
 body {
     background-color: #ebecf0;
+  
 }
 
-footer {
-    background-color: #ebecf0;
-}
+
 
 figure {
     width: 90%;
@@ -26,15 +25,50 @@ figure {
 }
 
 #index-title {
-    color: #02075D;
+    color:white;
 }
 
 #teams-title {
-    color: #02075D;
+    color:white;
 }
 
 #stats-title {
-    color: #02075D;
+    color:white;
+}
+
+#team-display-logo {
+    height: 60px;
+    width: 60px;
+}
+
+
+
+#display-name-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:lightgray;
+    font-size: 1em;
+}
+
+#next-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.stats-bold-title{
+    font-weight: bold;
 }
 
 #index-heading {
@@ -53,13 +87,10 @@ figure {
     background-color: #ebecf0;
 }
 
-#index-footer-content {
-    background-color: #F8F4FF;
-}
 
-#teams-footer {
-    background-color: #ebecf0;
-}
+
+
+
 
 #teams-footer-content {
     background-color: #F8F4FF;
@@ -69,6 +100,13 @@ figure {
     background-color: #ebecf0;
 }
 
-#stats-footer-content {
-    background-color: #F8F4FF;
+.footer {
+    display: flex;
+    flex-direction: column;
 }
+#footer2 {
+    margin: 1px;
+}
+/*#stats-footer-content {
+    background-color: #F8F4FF;
+}*/
