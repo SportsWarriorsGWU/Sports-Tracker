@@ -1,15 +1,12 @@
 body {
-    background-color: #ebecf0;
+    background-color: white;
   
 }
 
-
-
-figure {
-    width: 90%;
-    margin: 0.5rem auto;
+.hero {
+    background-color: #101010;
 }
-
+ 
 .has-bg-img {
     background-image: url(./images/banner.png);
     background-position: center center;
@@ -20,12 +17,26 @@ figure {
     opacity: 90%;
 }
 
-.is-child {
-    background-color: #02075D;
+.navbar-menu {
+    color: white;
 }
+
+
+.row-index-1 {
+    display:flex;
+    
+} 
+
+.row-index-2 {
+    display:flex;
+
+}
+
 
 #index-title {
     color:white;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 #teams-title {
@@ -34,6 +45,38 @@ figure {
 
 #stats-title {
     color:white;
+}
+
+.col-sm-2 {
+ 
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+
+}
+
+
+
+.team-images {
+    height: 100px;
+    width: 100px;
+     }
+
+#teams {
+    display:flex;
+justify-content: space-evenly;
+  flex-wrap:  wrap;
+  flex-basis: fit-content;
+  align-items: stretch;
+  
+
+}
+
+#team-page-dispname {
+    font-size: 2em; 
+   
+    
 }
 
 #team-display-logo {
@@ -73,6 +116,7 @@ figure {
 
 #index-heading {
     margin-bottom: 1rem;
+    
 }
 
 #teams-heading {
@@ -88,24 +132,23 @@ figure {
 }
 
 
-
-
-
-
 #teams-footer-content {
     background-color: #F8F4FF;
 }
 
 #stats-footer {
-    background-color: #ebecf0;
+    background-color:#101010;
+   
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-}
 #footer2 {
     margin: 1px;
+    color: white;
+    
+}
+
+.footer-p {
+    color: white;
 }
 /*#stats-footer-content {
     background-color: #F8F4FF;
