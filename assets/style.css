@@ -1,14 +1,9 @@
 body {
-    background-color: #ebecf0;
+    background-color: white;
 }
 
-footer {
-    background-color: #ebecf0;
-}
-
-figure {
-    width: 90%;
-    margin: 0.5rem auto;
+.hero {
+    background-color: #101010;
 }
 
 .has-bg-img {
@@ -17,24 +12,105 @@ figure {
     background-repeat: no-repeat;
 }
 
+img {
+    border: 1px solid black;
+    border-radius: 20%;
+}
+
+.carousel-item img {
+    border: none;
+}
+
 .navbar-item {
     opacity: 90%;
 }
 
-.is-child {
-    background-color: #02075D;
+.navbar-menu {
+    color: white;
+}
+
+
+/* .navbar-menu:hover {
+    color: black;
+} */
+
+.row-index-1 {
+    display: flex;
+}
+
+.row-index-2 {
+    display: flex;
 }
 
 #index-title {
-    color: #02075D;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #teams-title {
-    color: #02075D;
+    color: white;
+    text-transform: uppercase;
 }
 
 #stats-title {
-    color: #02075D;
+    color: white;
+    text-transform: uppercase;
+}
+
+.col-sm-2 {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.team-images {
+    height: 100px;
+    width: 100px;
+}
+
+#teams {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-basis: fit-content;
+    align-items: stretch;
+}
+
+#team-page-dispname {
+    font-size: 2em;
+}
+
+#team-display-logo {
+    height: 60px;
+    width: 60px;
+}
+
+#display-name-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: lightgray;
+    font-size: 1em;
+}
+
+#next-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-bold-title {
+    font-weight: bold;
 }
 
 #index-heading {
@@ -53,22 +129,90 @@ figure {
     background-color: #ebecf0;
 }
 
-#index-footer-content {
-    background-color: #F8F4FF;
-}
-
-#teams-footer {
-    background-color: #ebecf0;
-}
-
 #teams-footer-content {
     background-color: #F8F4FF;
 }
 
 #stats-footer {
-    background-color: #ebecf0;
+    background-color: #101010;
 }
 
-#stats-footer-content {
+#footer2 {
+    margin: 1px;
+    color: white;
+}
+
+.footer-p {
+    color: white;
+}
+
+
+/*#stats-footer-content {
     background-color: #F8F4FF;
+}*/
+
+
+/* Small phones: from 0 to 480px */
+
+@media only screen and (max-width: 767px) {
+    #index-title {
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    a.navbar-item:hover {
+        color: black!important;
+    }
+    .navbar-menu {
+        background-color: green;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #index-title,
+    #teams-title,
+    #stats-title {
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    a.navbar-item:hover {
+        color: black!important;
+    }
+    .navbar-menu {
+        background-color: green;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #index-title,
+    #teams-title,
+    #stats-title {
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .col {
+        width: 100%;
+    }
+    .row-index-1 {
+        display: inline-block;
+    }
+    .row-index-2 {
+        display: inline-block;
+    }
+    img {
+        border: 1px solid black;
+    }
+    .carousel-item img {
+        border: none;
+    }
+    a.navbar-item:hover {
+        color: black!important;
+    }
+    .navbar-menu {
+        background-color: green;
+    }
 }
