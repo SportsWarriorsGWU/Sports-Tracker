@@ -51,10 +51,12 @@ img {
 
 #teams-title {
     color: white;
+    text-transform: uppercase;
 }
 
 #stats-title {
     color: white;
+    text-transform: uppercase;
 }
 
 .col-sm-2 {
