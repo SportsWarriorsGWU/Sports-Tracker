@@ -166,7 +166,9 @@ img {
 }
 
 @media only screen and (max-width: 1023px) {
-    #index-title {
+    #index-title,
+    #teams-title,
+    #stats-title {
         color: white;
         font-size: 2em;
         font-weight: bold;
@@ -180,7 +182,9 @@ img {
 }
 
 @media only screen and (max-width: 480px) {
-    #index-title {
+    #index-title,
+    #teams-title,
+    #stats-title {
         color: white;
         font-size: 1em;
         font-weight: bold;
