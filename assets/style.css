@@ -1,16 +1,24 @@
 body {
     background-color: white;
-  
 }
 
 .hero {
     background-color: #101010;
 }
- 
+
 .has-bg-img {
     background-image: url(./images/banner.png);
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 20%;
+}
+
+.carousel-item img {
+    border: none;
 }
 
 .navbar-item {
@@ -22,61 +30,53 @@ body {
 }
 
 
+/* .navbar-menu:hover {
+    color: black;
+} */
+
 .row-index-1 {
-    display:flex;
-    
-} 
-
-.row-index-2 {
-    display:flex;
-
+    display: flex;
 }
 
+.row-index-2 {
+    display: flex;
+}
 
 #index-title {
-    color:white;
+    color: white;
     font-size: 3em;
     font-weight: bold;
 }
 
 #teams-title {
-    color:white;
+    color: white;
 }
 
 #stats-title {
-    color:white;
+    color: white;
 }
 
 .col-sm-2 {
- 
     height: 100%;
     width: 100%;
     align-items: center;
-
-
 }
-
-
 
 .team-images {
     height: 100px;
     width: 100px;
-     }
+}
 
 #teams {
-    display:flex;
-justify-content: space-evenly;
-  flex-wrap:  wrap;
-  flex-basis: fit-content;
-  align-items: stretch;
-  
-
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-basis: fit-content;
+    align-items: stretch;
 }
 
 #team-page-dispname {
-    font-size: 2em; 
-   
-    
+    font-size: 2em;
 }
 
 #team-display-logo {
@@ -84,9 +84,7 @@ justify-content: space-evenly;
     width: 60px;
 }
 
-
-
-#display-name-logo{
+#display-name-logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +95,7 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color:lightgray;
+    background-color: lightgray;
     font-size: 1em;
 }
 
@@ -106,17 +104,14 @@ justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
-
-.stats-bold-title{
+.stats-bold-title {
     font-weight: bold;
 }
 
 #index-heading {
     margin-bottom: 1rem;
-    
 }
 
 #teams-heading {
@@ -131,25 +126,84 @@ justify-content: space-evenly;
     background-color: #ebecf0;
 }
 
-
 #teams-footer-content {
     background-color: #F8F4FF;
 }
 
 #stats-footer {
-    background-color:#101010;
-   
+    background-color: #101010;
 }
 
 #footer2 {
     margin: 1px;
     color: white;
-    
 }
 
 .footer-p {
     color: white;
 }
+
+
 /*#stats-footer-content {
     background-color: #F8F4FF;
 }*/
+
+
+/* Small phones: from 0 to 480px */
+
+@media only screen and (max-width: 767px) {
+    #index-title {
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    a.navbar-item:hover {
+        color: black!important;
+    }
+    .navbar-menu {
+        background-color: green;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #index-title {
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    a.navbar-item:hover {
+        color: black!important;
+    }
+    .navbar-menu {
+        background-color: green;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #index-title {
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .col {
+        width: 100%;
+    }
+    .row-index-1 {
+        display: inline-block;
+    }
+    .row-index-2 {
+        display: inline-block;
+    }
+    img {
+        border: 1px solid black;
+    }
+    .carousel-item img {
+        border: none;
+    }
+    a.navbar-item:hover {
+        color: black!important;
+    }
+    .navbar-menu {
+        background-color: green;
+    }
+}

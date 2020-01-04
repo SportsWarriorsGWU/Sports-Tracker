@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="assets/style.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    </head>
-    <body>
-        <section id="teams-heading" class="hero is-small  has-bg-img">
-            <div class="hero-head">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-    
-            <div class="hero-body"></div>
-    
-            <div class="hero-foot">
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item">
-                                <h1 id="teams-title">Sports Tracker</h1>
-                            </a>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <section id="teams-heading" class="hero is-small  has-bg-img">
+        <div class="hero-head">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="hero-body"></div>
+
+        <div class="hero-foot">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <h1 id="teams-title">Sports Tracker</h1>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroB">
                             <span></span>
-                            <span></span>
-                            <span></span>
-                            </span>
-                        </div>
-                        <div class="navbar-menu">
-                            <div class="navbar-end">
-                                <a class="navbar-item is-active">
+                        <span></span>
+                        <span></span>
+                        </span>
+                    </div>
+                    <div class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="index.html">
                                     Home
                                 </a>
-                                <a class="navbar-item">
+                            <a class="navbar-item tile-images" id="MLB1" href="teams.html">
                                     MLB
                                 </a>
-                                <a class="navbar-item">
+                            <a cclass="navbar-item tile-images" id="NBA1" href="teams.html">
                                     NBA
                                 </a>
-                                <a class="navbar-item">
+                            <a class="navbar-item tile-images" id="NFL1" href="teams.html">
                                     NFL
                                 </a>
-                                <a class="navbar-item">
+                            <a class="navbar-item tile-images" id="NHL1" href="teams.html">
                                     NHL
                                 </a>
-                            </div>
                         </div>
                     </div>
-                </nav>
-            </div>
-        </section>
+                </div>
+            </nav>
+        </div>
+    </section>
 
-        <main>
-            <div class="container">
+    <main>
+        <div class="container">
             <div id="teams"></div>
         </div>
-        </main>
+    </main>
 
-        <footer id="stats-footer" class="footer">
-        
-            <div id="stats-footer-content" class="content has-text-centered">
-               
-                <strong id='footer2'>Sports Tracker © 2020</strong>
-                <p class="footer-p">
-                     powered by Michael Bradford, Joey Merino, Earl Blue, and Mohammad Chowdhury.
-                </p>
-            </div>
-        </footer>
+    <footer id="stats-footer" class="footer">
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="assets/teams.js"></script>
-    </body>
+        <div id="stats-footer-content" class="content has-text-centered">
+
+            <strong id='footer2'>Sports Tracker © 2020</strong>
+            <p class="footer-p">
+                powered by Michael Bradford, Joey Merino, Earl Blue, and Mohammad Chowdhury.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/teams.js"></script>
+</body>
+
 </html>

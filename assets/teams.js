@@ -8,9 +8,9 @@ $(document).ready(function() {
     let newID;
     const init = () => {
         leagueToLoad = JSON.parse(localStorage.getItem('newIDToLoad'));
-        if(leagueToLoad === null) {
+        if (leagueToLoad === null) {
             console.log('Error');
-        } else if(leagueToLoad === 'MLB') {
+        } else if (leagueToLoad === 'MLB' || leagueToLoad === 'MLB1') {
             $.ajax({
                 url: 'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams',
                 method: 'GET'
@@ -33,7 +33,7 @@ $(document).ready(function() {
                     }
                 }
             )
-        } else if (leagueToLoad === 'NBA') {
+        } else if (leagueToLoad === 'NBA' || leagueToLoad === 'NBA1') {
             $.ajax({
                 url: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams',
                 method: 'GET'
@@ -56,7 +56,7 @@ $(document).ready(function() {
                     }
                 }
             )
-        } else if (leagueToLoad === 'NFL') {
+        } else if (leagueToLoad === 'NFL' || leagueToLoad === 'NFL1') {
             $.ajax({
                 url: 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams',
                 method: 'GET'
@@ -79,7 +79,7 @@ $(document).ready(function() {
                     }
                 }
             )
-        } else if (leagueToLoad === 'NHL') {
+        } else if (leagueToLoad === 'NHL' || leagueToLoad === 'NHL1') {
             $.ajax({
                 url: 'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams',
                 method: 'GET'
@@ -107,7 +107,7 @@ $(document).ready(function() {
 
     init();
 
-    $('#teams').on('mouseover', '.team-images','.col-sm-2', function() {
+    $('#teams').on('mouseover', '.team-images', '.col-sm-2', function() {
         console.log($(this));
         newID = $(this)[0].id;
         console.log(newID);
