@@ -46,6 +46,7 @@ img {
     color: white;
     font-size: 3em;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 #teams-title {
@@ -156,6 +157,7 @@ img {
         color: white;
         font-size: 2em;
         font-weight: bold;
+        text-transform: uppercase;
     }
     a.navbar-item:hover {
         color: black!important;
@@ -172,6 +174,7 @@ img {
         color: white;
         font-size: 2em;
         font-weight: bold;
+        text-transform: uppercase;
     }
     a.navbar-item:hover {
         color: black!important;
