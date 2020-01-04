@@ -3,6 +3,7 @@ $(document).ready(function() {
     let teamToLoad;
     let paragraph;
     let image;
+    let leagueID;
     const init = () => {
         league = JSON.parse(localStorage.getItem('newIDToLoad'));
         teamToLoad = JSON.parse(localStorage.getItem('teamIDToLoad'));
@@ -120,4 +121,20 @@ $(document).ready(function() {
     }
 
     init();
+
+    $('.tile-images').mouseover(function() {
+        leagueID = $(this)[0].id;
+        console.log(leagueID);
+    })
+
+    $('.tile-images').mouseout(function() {
+        leagueID = '';
+        console.log(leagueID);
+    })
+
+    $(window).on('unload', function() {
+        if (leagueID !== undefined && leagueID !== '') {
+            localStorage.setItem('newIDToLoad', JSON.stringify(leagueID));
+        }
+    })
 })
