@@ -21,7 +21,6 @@ $(document).ready(function() {
                     for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
                         paragraph = $('<p>').text(response.sports[0].leagues[0].teams[i].team.displayName);
                         paragraph.attr('class', 'col-sm-2');
-                        $('#teams').append(paragraph);
                         source = response.sports[0].leagues[0].teams[i].team.logos[0].href;
                         ID = response.sports[0].leagues[0].teams[i].team.id;
                         icon = $('<img>').attr('src', source);
@@ -29,7 +28,8 @@ $(document).ready(function() {
                         icon.attr('id', ID);
                         link = $('<a>').attr('href', 'stats.html');
                         $(link).append(icon);
-                        $('#teams').append(link);
+                        $(paragraph).append(link);
+                        $('#teams').append(paragraph);
                     }
                 }
             )
@@ -43,7 +43,6 @@ $(document).ready(function() {
                     for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
                         paragraph = $('<p>').text(response.sports[0].leagues[0].teams[i].team.displayName);
                         paragraph.attr('class', 'col-sm-2');
-                        $('#teams').append(paragraph);
                         source = response.sports[0].leagues[0].teams[i].team.logos[0].href;
                         ID = response.sports[0].leagues[0].teams[i].team.id;
                         icon = $('<img>').attr('src', source);
@@ -51,7 +50,8 @@ $(document).ready(function() {
                         icon.attr('id', ID);
                         link = $('<a>').attr('href', 'stats.html');
                         $(link).append(icon);
-                        $('#teams').append(link);
+                        $(paragraph).append(link);
+                        $('#teams').append(paragraph);
                     }
                 }
             )
@@ -65,7 +65,6 @@ $(document).ready(function() {
                     for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
                         paragraph = $('<p>').text(response.sports[0].leagues[0].teams[i].team.displayName);
                         paragraph.attr('class', 'col-sm-2');
-                        $('#teams').append(paragraph);
                         source = response.sports[0].leagues[0].teams[i].team.logos[0].href;
                         ID = response.sports[0].leagues[0].teams[i].team.id;
                         icon = $('<img>').attr('src', source);
@@ -73,7 +72,8 @@ $(document).ready(function() {
                         icon.attr('id', ID);
                         link = $('<a>').attr('href', 'stats.html');
                         $(link).append(icon);
-                        $('#teams').append(link);
+                        $(paragraph).append(link);
+                        $('#teams').append(paragraph);
                     }
                 }
             )
@@ -87,7 +87,6 @@ $(document).ready(function() {
                     for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
                         paragraph = $('<p>').text(response.sports[0].leagues[0].teams[i].team.displayName);
                         paragraph.attr('class', 'col-sm-2');
-                        $('#teams').append(paragraph);
                         source = response.sports[0].leagues[0].teams[i].team.logos[0].href;
                         ID = response.sports[0].leagues[0].teams[i].team.id;
                         icon = $('<img>').attr('src', source);
@@ -95,7 +94,8 @@ $(document).ready(function() {
                         icon.attr('id', ID);
                         link = $('<a>').attr('href', 'stats.html');
                         $(link).append(icon);
-                        $('#teams').append(link);
+                        $(paragraph).append(link);
+                        $('#teams').append(paragraph);
                     }
                 }
             )
