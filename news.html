@@ -95,6 +95,7 @@
 <script>
 var queryURL = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=6d607add9f0d4daaa5c83e7c41ca3cd8"
 let storyRow;
+let mediaBody;
 let title;
 let description;
 let thumbNail;
@@ -106,6 +107,7 @@ $.ajax({
     console.log(queryURL);
     console.log(response);
     for (let i = 0; i < response.articles.length; i++) {
+        
         storyRow = $("<li>")
         storyRow.attr("class", "media")
         
@@ -113,8 +115,11 @@ $.ajax({
         thumbNail.attr("class", "mr-3");
         thumbNail.height(150);
         thumbNail.width(150);
+
+        mediaBody = $("<div>")
+        mediaBody.attr("class", "media-body");
         
-        title = $("<h6>").text(response.articles[i].title);
+        title = $("<h5>").text(response.articles[i].title);
         title.attr("class", "media-body", "mt-0", "mb-3", "font-weight-bold");
         
         
@@ -125,10 +130,11 @@ $.ajax({
         newsLink.attr("href", response.articles[i].url);
         newsLink.attr("class", "media-body", "mt-1", "mb-1");
         
+        $(mediaBody).append(title);
+        $(mediaBody).append(description);
+        $(mediaBody).append(newsLink);
         $(storyRow).append(thumbNail);
-        $(storyRow).append(title);
-        $(title).append(description);
-        $(title).append(newsLink);        
+        $(storyRow).append(mediaBody);
         $(".news-list").append(storyRow);
         
     }
