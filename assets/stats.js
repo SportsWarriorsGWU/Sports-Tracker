@@ -2,6 +2,7 @@ $(document).ready(function() {
     let league;
     let teamToLoad;
     let paragraph;
+    let newParagraph = '';
     let image;
     let leagueID;
     const init = () => {
@@ -20,6 +21,8 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
+                    image = $('<i>').attr('class', 'far fa-star unfavorited');
+                    $('#team-display-logo').append(image);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -32,7 +35,16 @@ $(document).ready(function() {
                     $('#next-game').append(paragraph);
                     paragraph = $('<p>').text(response.team.nextEvent[0].shortName);
                     $('#next-game').append(paragraph);
-                    paragraph = $('<p>').text(response.team.nextEvent[0].date);
+                    paragraph = response.team.nextEvent[0].date;
+                    for (let i = 0; i < paragraph.length; i++) {
+                        if (i === 9) {
+                            newParagraph += paragraph[i];
+                            newParagraph += ' ';
+                        } else if (paragraph[i] !== 'T' && paragraph[i] !== 'Z') {
+                            newParagraph += paragraph[i];
+                        }
+                    }
+                    paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                 }
             )
@@ -47,6 +59,8 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
+                    image = $('<i>').attr('class', 'far fa-star unfavorited');
+                    $('#team-display-logo').append(image);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -55,11 +69,20 @@ $(document).ready(function() {
                     $('#ties').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].summary);
                     $('#record').append(paragraph);
-                    //paragraph = $('<p>').text(response.team.nextEvent[0].name);
-                    //$('#next-game').append(paragraph);
+                    paragraph = $('<p>').text(response.team.nextEvent[0].name);
+                    $('#next-game').append(paragraph);
                     paragraph = $('<p>').text(response.team.nextEvent[0].shortName);
                     $('#next-game').append(paragraph);
-                    paragraph = $('<p>').text(response.team.nextEvent[0].date);
+                    paragraph = response.team.nextEvent[0].date;
+                    for (let i = 0; i < paragraph.length; i++) {
+                        if (i === 9) {
+                            newParagraph += paragraph[i];
+                            newParagraph += ' ';
+                        } else if (paragraph[i] !== 'T' && paragraph[i] !== 'Z') {
+                            newParagraph += paragraph[i];
+                        }
+                    }
+                    paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                 }
             )
@@ -74,6 +97,8 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
+                    image = $('<i>').attr('class', 'far fa-star unfavorited');
+                    $('#team-display-logo').append(image);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -86,7 +111,16 @@ $(document).ready(function() {
                     $('#next-game').append(paragraph);
                     paragraph = $('<p>').text(response.team.nextEvent[0].shortName);
                     $('#next-game').append(paragraph);
-                    paragraph = $('<p>').text(response.team.nextEvent[0].date);
+                    paragraph = response.team.nextEvent[0].date;
+                    for (let i = 0; i < paragraph.length; i++) {
+                        if (i === 9) {
+                            newParagraph += paragraph[i];
+                            newParagraph += ' ';
+                        } else if (paragraph[i] !== 'T' && paragraph[i] !== 'Z') {
+                            newParagraph += paragraph[i];
+                        }
+                    }
+                    paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                 }
             )
@@ -101,6 +135,8 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
+                    image = $('<i>').attr('class', 'far fa-star unfavorited');
+                    $('#team-display-logo').append(image);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -113,7 +149,16 @@ $(document).ready(function() {
                     $('#next-game').append(paragraph);
                     paragraph = $('<p>').text(response.team.nextEvent[0].shortName);
                     $('#next-game').append(paragraph);
-                    paragraph = $('<p>').text(response.team.nextEvent[0].date);
+                    paragraph = response.team.nextEvent[0].date;
+                    for (let i = 0; i < paragraph.length; i++) {
+                        if (i === 9) {
+                            newParagraph += paragraph[i];
+                            newParagraph += ' ';
+                        } else if (paragraph[i] !== 'T' && paragraph[i] !== 'Z') {
+                            newParagraph += paragraph[i];
+                        }
+                    }
+                    paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                 }
             )
@@ -135,6 +180,16 @@ $(document).ready(function() {
     $(window).on('unload', function() {
         if (leagueID !== undefined && leagueID !== '') {
             localStorage.setItem('newIDToLoad', JSON.stringify(leagueID));
+        }
+    })
+
+    $('#team-display-logo').click(function() {
+        if ($(this).find('svg')[0].classList.contains('unfavorited') === true) {
+            $(this).find('svg').removeClass('far fa-star unfavorited');
+            $(this).find('svg').addClass('fas fa-star favorited');
+        } else if ($(this).find('svg')[0].classList.contains('favorited') === true) {
+            $(this).find('svg').removeClass('fas fa-star favorited');
+            $(this).find('svg').addClass('far fa-star unfavorited');
         }
     })
 })
