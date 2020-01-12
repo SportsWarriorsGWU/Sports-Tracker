@@ -71,7 +71,7 @@ $(document).ready(function() {
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                     $.ajax({
-                        url: 'http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams',
+                        url: 'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams',
                         method: 'GET'
                     }).then(
                         function(response) {
@@ -133,7 +133,7 @@ $(document).ready(function() {
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                     $.ajax({
-                        url: 'http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams',
+                        url: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams',
                         method: 'GET'
                     }).then(
                         function(response) {
@@ -195,7 +195,7 @@ $(document).ready(function() {
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                     $.ajax({
-                        url: 'http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams',
+                        url: 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams',
                         method: 'GET'
                     }).then(
                         function(response) {
@@ -257,7 +257,7 @@ $(document).ready(function() {
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
                     $.ajax({
-                        url: 'http://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams',
+                        url: 'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams',
                         method: 'GET'
                     }).then(
                         function(response) {
