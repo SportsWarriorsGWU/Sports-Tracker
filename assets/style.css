@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    font-family: 'Gayathri', sans-serif;
 }
 
 .hero {
@@ -56,8 +57,6 @@ svg {
 
 #index-title {
     color: white;
-    font-size: 3em;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -155,6 +154,26 @@ svg {
 }
 
 .footer-p {
+    color: white;
+}
+
+#index-link {
+    text-decoration: none;
+    color: white;
+}
+
+#teams-link {
+    text-decoration: none;
+    color: white;
+}
+
+#stats-link {
+    text-decoration: none;
+    color: white;
+}
+
+#news-link {
+    text-decoration: none;
     color: white;
 }
 

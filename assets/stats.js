@@ -70,6 +70,25 @@ $(document).ready(function() {
                     }
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
+                    $.ajax({
+                        url: 'http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams',
+                        method: 'GET'
+                    }).then(
+                        function(response) {
+                            paragraph = $('<a>').text('Tickets');
+                            for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
+                                if(response.sports[0].leagues[0].teams[i].team.id === teamToLoad) {
+                                    for (let j = 0; j < response.sports[0].leagues[0].teams[i].team.links.length; j++) {
+                                        if (response.sports[0].leagues[0].teams[i].team.links[j].rel[0] === 'tickets') {
+                                            paragraph.attr('href', response.sports[0].leagues[0].teams[i].team.links[j].href);
+                                        }
+                                    }
+                                }
+                            }
+                            paragraph.attr('target', '_blank');
+                            $('#next-game').append(paragraph);
+                        }
+                    )
                 }
             )
         } else if (league === 'NBA' || league === 'NBA1') {
@@ -113,6 +132,25 @@ $(document).ready(function() {
                     }
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
+                    $.ajax({
+                        url: 'http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams',
+                        method: 'GET'
+                    }).then(
+                        function(response) {
+                            paragraph = $('<a>').text('Tickets');
+                            for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
+                                if(response.sports[0].leagues[0].teams[i].team.id === teamToLoad) {
+                                    for (let j = 0; j < response.sports[0].leagues[0].teams[i].team.links.length; j++) {
+                                        if (response.sports[0].leagues[0].teams[i].team.links[j].rel[0] === 'tickets') {
+                                            paragraph.attr('href', response.sports[0].leagues[0].teams[i].team.links[j].href);
+                                        }
+                                    }
+                                }
+                            }
+                            paragraph.attr('target', '_blank');
+                            $('#next-game').append(paragraph);
+                        }
+                    )
                 }
             )
         } else if (league === 'NFL' || league === 'NFL1') {
@@ -156,6 +194,25 @@ $(document).ready(function() {
                     }
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
+                    $.ajax({
+                        url: 'http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams',
+                        method: 'GET'
+                    }).then(
+                        function(response) {
+                            paragraph = $('<a>').text('Tickets');
+                            for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
+                                if(response.sports[0].leagues[0].teams[i].team.id === teamToLoad) {
+                                    for (let j = 0; j < response.sports[0].leagues[0].teams[i].team.links.length; j++) {
+                                        if (response.sports[0].leagues[0].teams[i].team.links[j].rel[0] === 'tickets') {
+                                            paragraph.attr('href', response.sports[0].leagues[0].teams[i].team.links[j].href);
+                                        }
+                                    }
+                                }
+                            }
+                            paragraph.attr('target', '_blank');
+                            $('#next-game').append(paragraph);
+                        }
+                    )
                 }
             )
         } else if (league === 'NHL' || league === 'NHL1') {
@@ -199,6 +256,25 @@ $(document).ready(function() {
                     }
                     paragraph = $('<p>').text(newParagraph)
                     $('#next-game').append(paragraph);
+                    $.ajax({
+                        url: 'http://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams',
+                        method: 'GET'
+                    }).then(
+                        function(response) {
+                            paragraph = $('<a>').text('Tickets');
+                            for (let i = 0; i < response.sports[0].leagues[0].teams.length; i++) {
+                                if(response.sports[0].leagues[0].teams[i].team.id === teamToLoad) {
+                                    for (let j = 0; j < response.sports[0].leagues[0].teams[i].team.links.length; j++) {
+                                        if (response.sports[0].leagues[0].teams[i].team.links[j].rel[0] === 'tickets') {
+                                            paragraph.attr('href', response.sports[0].leagues[0].teams[i].team.links[j].href);
+                                        }
+                                    }
+                                }
+                            }
+                            paragraph.attr('target', '_blank');
+                            $('#next-game').append(paragraph);
+                        }
+                    )
                 }
             )
         }
