@@ -5,9 +5,28 @@ $(document).ready(function() {
     let newParagraph = '';
     let image;
     let leagueID;
+    let MLBFave;
+    let NBAFave;
+    let NFLFave;
+    let NHLFave;
+    let faveTeam;
+
     const init = () => {
         league = JSON.parse(localStorage.getItem('newIDToLoad'));
+        if (league === 'MLB' || league === 'MLB1') {
+            faveTeam = JSON.parse(localStorage.getItem('MLBFave'));
+        } else if (league === 'NBA' || league === 'NBA1') {
+            faveTeam = JSON.parse(localStorage.getItem('NBAFave'));
+        } else if (league === 'NFL' || league === 'NFL1') {
+            faveTeam = JSON.parse(localStorage.getItem('NFLFave'));
+        } else if (league === 'NHL' || league === 'NHL1') {
+            faveTeam = JSON.parse(localStorage.getItem('NHLFave'));
+        } else {
+            faveTeam = false;
+        }
+        console.log(faveTeam);
         teamToLoad = JSON.parse(localStorage.getItem('teamIDToLoad'));
+        console.log(teamToLoad);
         if (teamToLoad === null) {
             console.log('Error');
         } else if (league === 'MLB' || league === 'MLB1') {
@@ -21,8 +40,13 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
-                    image = $('<i>').attr('class', 'far fa-star unfavorited');
-                    $('#team-display-logo').append(image);
+                    if (faveTeam === false || faveTeam !== teamToLoad) {
+                        image = $('<i>').attr('class', 'far fa-star unfavorited');
+                        $('#team-display-logo').append(image);
+                    } else {
+                        image = $('<i>').attr('class', 'fas fa-star favorited');
+                        $('#team-display-logo').append(image);
+                    }
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -59,8 +83,13 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
-                    image = $('<i>').attr('class', 'far fa-star unfavorited');
-                    $('#team-display-logo').append(image);
+                    if (faveTeam === false || faveTeam !== teamToLoad) {
+                        image = $('<i>').attr('class', 'far fa-star unfavorited');
+                        $('#team-display-logo').append(image);
+                    } else {
+                        image = $('<i>').attr('class', 'fas fa-star favorited');
+                        $('#team-display-logo').append(image);
+                    }
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -97,8 +126,13 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
-                    image = $('<i>').attr('class', 'far fa-star unfavorited');
-                    $('#team-display-logo').append(image);
+                    if (faveTeam === false || faveTeam !== teamToLoad) {
+                        image = $('<i>').attr('class', 'far fa-star unfavorited');
+                        $('#team-display-logo').append(image);
+                    } else {
+                        image = $('<i>').attr('class', 'fas fa-star favorited');
+                        $('#team-display-logo').append(image);
+                    }
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -135,8 +169,13 @@ $(document).ready(function() {
                     $('#team-display-name').append(paragraph);
                     image = $('<img>').attr('src', response.team.logos[0].href);
                     $('#team-display-logo').append(image);
-                    image = $('<i>').attr('class', 'far fa-star unfavorited');
-                    $('#team-display-logo').append(image);
+                    if (faveTeam === false || faveTeam !== teamToLoad) {
+                        image = $('<i>').attr('class', 'far fa-star unfavorited');
+                        $('#team-display-logo').append(image);
+                    } else {
+                        image = $('<i>').attr('class', 'fas fa-star favorited');
+                        $('#team-display-logo').append(image);
+                    }
                     paragraph = $('<p>').text(response.team.record.items[0].stats[1].value);
                     $('#wins').append(paragraph);
                     paragraph = $('<p>').text(response.team.record.items[0].stats[2].value);
@@ -187,9 +226,35 @@ $(document).ready(function() {
         if ($(this).find('svg')[0].classList.contains('unfavorited') === true) {
             $(this).find('svg').removeClass('far fa-star unfavorited');
             $(this).find('svg').addClass('fas fa-star favorited');
+            if (league === 'MLB' || league === 'MLB1') {
+                MLBFave = teamToLoad;
+                localStorage.setItem('MLBFave', JSON.stringify(MLBFave));
+            } else if (league === 'NBA' || league === 'NBA1') {
+                NBAFave = teamToLoad;
+                localStorage.setItem('NBAFave', JSON.stringify(NBAFave));
+            } else if (league === 'NFL' || league === 'NFL1') {
+                NFLFave = teamToLoad;
+                localStorage.setItem('NFLFave', JSON.stringify(NFLFave));
+            } else if (league === 'NHL' || league === 'NHL1') {
+                NHLFave = teamToLoad;
+                localStorage.setItem('NHLFave', JSON.stringify(NHLFave));
+            }
         } else if ($(this).find('svg')[0].classList.contains('favorited') === true) {
             $(this).find('svg').removeClass('fas fa-star favorited');
             $(this).find('svg').addClass('far fa-star unfavorited');
+            if (league === 'MLB' || league === 'MLB1') {
+                MLBFave = false;
+                localStorage.setItem('MLBFave', JSON.stringify(MLBFave));
+            } else if (league === 'NBA' || league === 'NBA1') {
+                NBAFave = false;
+                localStorage.setItem('NBAFave', JSON.stringify(NBAFave));
+            } else if (league === 'NFL' || league === 'NFL1') {
+                NFLFave = false;
+                localStorage.setItem('NFLFave', JSON.stringify(NFLFave));
+            } else if (league === 'NHL' || league === 'NHL1') {
+                NHLFave = false;
+                localStorage.setItem('NHLFave', JSON.stringify(NHLFave));
+            }
         }
     })
 })
