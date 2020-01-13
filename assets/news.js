@@ -42,20 +42,20 @@
         });
         $('.carousel').carousel({
             interval: 2000
-        })
+        });
 
         $('.tile-images').mouseover(function() {
             leagueID = $(this)[0].id;
             console.log(leagueID);
-        })
+        });
     
         $('.tile-images').mouseout(function() {
             leagueID = '';
             console.log(leagueID);
-        })
+        });
     
         $(window).on('unload', function() {
             if (leagueID !== undefined && leagueID !== '') {
                 localStorage.setItem('newIDToLoad', JSON.stringify(leagueID));
             }
-        })
+        });
