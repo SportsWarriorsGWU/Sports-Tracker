@@ -15,8 +15,7 @@ body {
 
 #NFL, #NHL, #MLB, #NBA {
     background-color:whitesmoke;
-    padding-left: 30px;
-    padding-right: 30px;
+
     box-shadow: 10px 5px 5px black;
    
 
@@ -27,6 +26,13 @@ img {
     box-shadow: 10px 5px 5px black;
   
 }
+
+.col-md-6 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .fa-star{
     margin: 10px;
@@ -61,10 +67,14 @@ svg {
 
 .row-index-0 {
     display: flex;
+    justify-content: center;
+ 
 }
 
 .row-index-point5 {
     display: flex;
+justify-content: center;
+
 }
 
 .row-index-1 {
@@ -74,6 +84,8 @@ svg {
 .row-index-2 {
     display: flex;
 }
+
+
 
 #index-title {
     color: white;
