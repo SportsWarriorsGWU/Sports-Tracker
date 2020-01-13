@@ -37,5 +37,5 @@ jQuery
 ​
 Copyright(c) 2020 By Michael Bradford, Joey Merino, Earl Blue, and Mohammad Chowdhury
 
-![App Demo](./assets/images/appdemo.jpg)
+
 ​
