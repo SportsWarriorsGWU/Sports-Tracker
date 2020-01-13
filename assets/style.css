@@ -13,9 +13,29 @@ body {
     background-repeat: no-repeat;
 }
 
+#NFL, #NHL, #MLB, #NBA {
+    background-color:whitesmoke;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 10px 5px 5px black;
+   
+
+}
 img {
-    border: 1px solid black;
-    border-radius: 20%;
+    border: .3px lightgray;
+    border-radius: 5%;
+    box-shadow: 10px 5px 5px black;
+  
+}
+
+.fa-star{
+    margin: 10px;
+}
+
+.mr-3 {
+    height: 25%;
+    width: 25%;
+
 }
 
 a:hover {

@@ -18,8 +18,7 @@
 
                 thumbNail = $("<img>").attr("src", response.articles[i].urlToImage);
                 thumbNail.attr("class", "mr-3");
-                thumbNail.height(150);
-                thumbNail.width(150);
+         
 
                 mediaBody = $("<div>")
                 mediaBody.attr("class", "media-body");
@@ -33,33 +32,30 @@
 
                 newsLink = $("<a>").text(response.articles[i].url);
                 newsLink.attr("href", response.articles[i].url);
-                newsLink.attr("class", "media-body btn btn-primary", "mt-1", "mb-1").text('Read/Watch News');
+                newsLink.attr("class", "media-body btn btn-dark", "mt-1", "mb-1").text('Read/Watch News');
 
-                $(mediaBody).append(title);
-                $(mediaBody).append(description);
-                $(mediaBody).append(newsLink);
-                $(storyRow).append(thumbNail);
-                $(storyRow).append(mediaBody);
+                $(mediaBody).append(title, description, newsLink);
+                $(storyRow).append(thumbNail, mediaBody);
                 $(".news-list").append(storyRow);
 
             }
         });
         $('.carousel').carousel({
             interval: 2000
-        })
+        });
 
         $('.tile-images').mouseover(function() {
             leagueID = $(this)[0].id;
             console.log(leagueID);
-        })
+        });
     
         $('.tile-images').mouseout(function() {
             leagueID = '';
             console.log(leagueID);
-        })
+        });
     
         $(window).on('unload', function() {
             if (leagueID !== undefined && leagueID !== '') {
                 localStorage.setItem('newIDToLoad', JSON.stringify(leagueID));
             }
-        })
+        });
