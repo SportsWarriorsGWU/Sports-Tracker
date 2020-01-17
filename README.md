@@ -3,6 +3,9 @@
 #### Sports-Tracker, 1/12/20
 ​
 #### By Michael Bradford, Joey Merino, Earl Blue, and Mohammad Chowdhury
+
+## The Link
+https://sportswarriorsgwu.github.io/Sports-Tracker/
 ​
 ## Description
 Sports Tracker is a website dedicated to the professional sports leagues of the United States (minus MLS to come in a later version). It features stats and news related to each league and the specific teams, as well as quick links and a favorite function.
